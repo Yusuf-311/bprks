@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Around | Creative Agency</title>
+    <!-- SEO Meta Tags-->
+    <meta
+      name="description"
+      content="Around - Multipurpose Bootstrap Template"
+    />
+    <meta
+      name="keywords"
+      content="bootstrap, business, consulting, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, multipurpose, product landing, shop, software, ui kit, web studio, landing, html5, css3, javascript, gallery, slider, touch, creative"
+    />
+    <meta name="author" content="Createx Studio" />
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg" />
+    <meta name="msapplication-TileColor" content="#766df4" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #737491;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #766df4;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector(".page-loading");
+          preloader.classList.remove("active");
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+    <!-- Vendor Styles-->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="vendor/simplebar/dist/simplebar.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="vendor/tiny-slider/dist/tiny-slider.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="vendor/lightgallery.js/dist/css/lightgallery.min.css"
+    />
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css" />
+  </head>
+  <!-- Body-->
+  <body>
+    <main class="page-wrapper container px-7">
+      <div
+        class="row"
+        style="
+          background-image: url(images/bgmenu-17-17.webp);
+          background-repeat: no-repeat;
+          background-size: cover;
+        "
+      >
+        <div class="col pt-6 ps-5">
+          <img
+            src="images/logoKS_kecil.webp"
+            width="50px"
+            class="mb-4"
+            alt=""
+          />
+          <br />
+          <img src="images/BPR-20.png" width="100px" alt="" />
+        </div>
+        <div class="col-7">
+          <!-- Basic navbar: Button (change to .container-fluid for full width navbar) -->
+          <header class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-0 px-xl-3 pt-7">
+              <a class="navbar-brand order-lg-1 me-0 pe-lg-2 me-lg-4" href="#">
+              </a>
+              <div class="d-flex align-items-center order-lg-3">
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarCollapse1"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+              <div class="order-lg-2" id="navbarCollapse1">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Beranda</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Informasi & Berita</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Karir</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Hubungi Kami</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </header>
+
+          <!-- Basic navbar: Logged in user (change to .container-fluid for full width navbar) -->
+          <header class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-0 px-xl-3">
+              <a class="navbar-brand order-lg-1 me-0 pe-lg-2 me-lg-4" href="#">
+              </a>
+              <div class="d-flex align-items-center order-lg-3">
+                <button
+                  class="navbar-toggler me-2"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarCollapse3"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+              <div
+                class="collapse navbar-collapse order-lg-2"
+                id="navbarCollapse3"
+              >
+                <!-- Site menu goes here. See example above -->
+              </div>
+            </div>
+          </header>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <!-- Vertical tabs -->
+            <ul class="nav nav-tabs flex-column" role="tablist">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="#"
+                  data-bs-toggle="tab"
+                  role="tab"
+                >
+                  Tentang BPR KS
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="tab" role="tab">
+                  <i class="ai-user me-2"></i>
+                  Produk
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="tab" role="tab">
+                  <i class="ai-message-square me-2"></i>
+                  Fasilitas & Fitur
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="tab" role="tab">
+                  <i class="ai-settings me-2"></i>
+                  Delivery Channel
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="tab" role="tab">
+                  <i class="ai-settings me-2"></i>
+                  Kantor Cabang
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-4" style="height: 5vh">
+            <img src="images/kabm.png" alt="" />
+            <p class="fs-xs">
+              Adalah kredit angsuran dimana jumlah pinjaman minimum adalah Rp.1
+              juta dan maksimum sebesar Rp.25jt dengan catatan jaminan BPKB
+              sepeda motor
+            </p>
+            <h5 class="fs-xs">MANFAAT</h5>
+            <p class="fs-xs">
+              Dengan BPKB sepeda motor yang anda jaminkan di BPR KS, anda akan
+              mendapat pinjaman yang dapat digunakan untuk memenuhi berbagai
+              kebutuhan.
+            </p>
+            <h5 class="fs-xs">FITUR</h5>
+            <p class="fs-xs">
+              KABM adalah produk kredit yang menggunakan jenis suku bunga flat
+              rate atau bunga flat dengan angsuran tetap perbulan, sedangkan
+              untuk menghitung angsuran bunga yang menurun tiap bulan
+              menggunakan bunga efektif. Metode perhitungan tersebut disebut
+              Metode Anuitas
+            </p>
+            <h5 class="fs-xs">KEMUDAHAN DAN KEUNTUNGAN</h5>
+            <ol class="fs-xs">
+              <li>
+                Penyetoran tunai dapat dilakukan 7 hari 24 jam melalui mesin
+                CRM. (Cash Recyle Machine)
+              </li>
+              <li>
+                Terdapat pilihan jangka waktu kredit, yaitu 1, 2, atau 3 Tahun
+              </li>
+              <li>Suku bunga kompetitif</li>
+              <li>Persyaratan Dokumen Mudah</li>
+              <li>Plafond tinggi</li>
+            </ol>
+
+            <h5 class="fs-xs">BIAYA</h5>
+            <p class="fs-xs">
+              Biaya penagihan sesuai dengan produk yang diambil
+            </p>
+            <div class="p-2" style="border-style: dashed">
+              <h5 class="fs-xs">INFORMASI LEBIH LANJUT :</h5>
+              <p class="fs-xs">
+                Hubungi call center kami di nomer telepon: 022-4556600
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <!-- Fade transition + Layer animations -->
+            <div class="tns-carousel-wrapper tns-controls-center">
+              <div
+                class="tns-carousel-inner"
+                data-carousel-options='{"mode": "gallery", "nav": false}'
+              >
+                <div>
+                  <div class="rounded-3 text-center">
+                    <img src="images/dalem-02.webp" width="200px" alt="" />
+                  </div>
+                </div>
+                <div>
+                  <div class="rounded-3 text-center">
+                    <img src="images//dalem-03.webp" width="200px" alt="" />
+                  </div>
+                </div>
+                <div>
+                  <div class="rounded-3 text-center">
+                    <img src="images//dalem-04.webp" width="200px" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Back to top button--><a
+      class="btn-scroll-top"
+      href="#top"
+      data-scroll
+      data-fixed-element
+      ><span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span
+      ><i class="btn-scroll-top-icon ai-arrow-up"> </i
+    ></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="vendor/shufflejs/dist/shuffle.min.js"></script>
+    <script src="vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="vendor/lg-video.js/dist/lg-video.min.js"></script>
+    <script src="vendor/parallax-js/dist/parallax.min.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+  </body>
+</html>
